@@ -24,6 +24,7 @@ namespace TowerDefense.Presenter
             }
         }
 
+
         IEnumerator DamageAnimation()
         {
             var speed = .2f; //how long it takes (*2 here because it's done twice)

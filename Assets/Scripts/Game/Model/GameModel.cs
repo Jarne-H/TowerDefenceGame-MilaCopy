@@ -31,6 +31,9 @@ namespace TowerDefense.Model
 
         public EventHandler CreatedGoal;
 
+        //goal attack event
+        public EventHandler<GoalModelEventArgs> AttackedGoal;
+
         public CommandHistory<GameModel> CommandHistory { get; private set; }
 
         public int TowerDamage { get; set; }
@@ -245,7 +248,21 @@ namespace TowerDefense.Model
             if (sender is EnemyModel enemy)
             {
                 Goal.TakeDamage(EnemyDamage);
+                if (Goal.Health <= 0)
+                {
+                    enemy.SelfDestruct();
+                    IsGameOver = true;
+                }
+                else
+                {
+                    OnAttackedGoal(new GoalModelEventArgs(Goal));
+                }
             }
+        }
+
+        protected virtual void OnAttackedGoal(GoalModelEventArgs e)
+        {
+            AttackedGoal?.Invoke(this, e);
         }
 
         private void Created_Enemy(object sender, EnemyModelEventArgs e)
