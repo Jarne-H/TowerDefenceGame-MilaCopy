@@ -9,7 +9,7 @@ using UnityEngine.UIElements;
 [CustomEditor(typeof(HexMapDefinition))]
 public class HexMapEditor : Editor
 {
-    private CellType _customCellType = CellType.Road;
+    private CellType _customCellType = CellType.Grass;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public override VisualElement CreateInspectorGUI()
@@ -24,19 +24,17 @@ public class HexMapEditor : Editor
 
 
 
-        // Create the EnumField for CellType
-        EnumField customTileTypeField = new EnumField("CustomCellType", _customCellType);
-        customTileTypeField.Init(_customCellType); // Ensure EnumField is initialized with the correct value
-
-        // Add the EnumField to the inspector UI
-        myInspector.Add(customTileTypeField);
-
-        // Register the value changed callback
-        customTileTypeField.RegisterValueChangedCallback((ChangeEvent<Enum> change) =>
+        // Query the EnumField from the UXML
+        EnumField customTileTypeField = myInspector.Q<EnumField>("CustomCellType");
+        if (customTileTypeField != null)
         {
-            _customCellType = (CellType)change.newValue;
-            customTileTypeField.value = change.newValue; // Explicitly update the field's value
-        });
+            customTileTypeField.Init(_customCellType);
+            customTileTypeField.value = _customCellType;
+            customTileTypeField.RegisterValueChangedCallback((ChangeEvent<Enum> change) =>
+            {
+                _customCellType = (CellType)change.newValue;
+            });
+        }
 
         Button setCustomTilesButton = myInspector.Q<Button>("SetCustomCellTypeButton");
         setCustomTilesButton.clicked += SetCustomTilesButton_clicked;
@@ -80,6 +78,8 @@ public class HexMapEditor : Editor
             arrayProperty.DeleteArrayElementAtIndex(matchingIndex);
         }
 
+        // Debug log to verify _customCellType before use
+        Debug.Log($"Setting custom tiles with CellType: {_customCellType}");
 
         foreach (HexPosition pos in _selectedPositions)
         {
