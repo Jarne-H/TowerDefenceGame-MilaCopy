@@ -1,0 +1,8 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:VisualElement style="flex-grow: 1; margin-top: 100px; margin-right: 200px; margin-bottom: 100px; margin-left: 200px; background-color: rgb(178, 208, 255); align-items: center; align-content: auto; justify-content: center;">
+        <engine:Label text="Game Over!" style="color: rgb(49, 82, 168); font-size: 100px; -unity-font-style: bold; -unity-text-align: upper-center; margin-bottom: 31px;" />
+        <engine:Button text="Watch Replay" name="WatchReplayButton" style="font-size: 60px; -unity-font-style: bold; color: rgb(178, 208, 255); background-color: rgb(49, 82, 168); height: 100px; width: 1000px; align-self: center; margin-bottom: 39px;" />
+        <engine:Button text="New Game" name="NewGameButton" style="font-size: 60px; -unity-font-style: bold; color: rgb(178, 208, 255); background-color: rgb(49, 82, 168); height: 100px; width: 1000px; align-self: center; margin-bottom: 39px;" />
+        <engine:Button text="Menu&#10;" name="MenuButton" style="font-size: 60px; -unity-font-style: bold; color: rgb(178, 208, 255); background-color: rgb(49, 82, 168); height: 100px; width: 1000px; align-self: center;" />
+    </engine:VisualElement>
+</engine:UXML>

@@ -1,0 +1,59 @@
+.button {
+    font-size: 60px;
+    -unity-font-style: bold;
+    color: rgb(178, 208, 255);
+    background-color: rgb(49, 82, 168);
+    height: 100px;
+    width: 65%;
+    align-self: center;
+    max-width: none;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.header {
+    color: rgb(49, 82, 168);
+    font-size: 100px;
+    -unity-font-style: bold;
+    -unity-text-align: upper-center;
+    margin-bottom: 31px;
+}
+
+.h2 {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-left: 24px;
+    margin-right: 24px;
+    padding-right: 0;
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 32px;
+    -unity-font-style: bold;
+    -unity-text-outline-width: 0;
+}
+
+.h3 {
+    margin-left: 40px;
+    font-size: 25px;
+    -unity-font-style: bold;
+    -unity-text-align: upper-left;
+}
+
+.background {
+    flex-grow: 1;
+    margin-top: 200px;
+    margin-right: 100px;
+    margin-bottom: 200px;
+    margin-left: 100px;
+    background-color: rgb(178, 208, 255);
+    align-items: center;
+    align-content: auto;
+    justify-content: center;
+}
+
+.button {
+    margin-bottom: 16px;
+}

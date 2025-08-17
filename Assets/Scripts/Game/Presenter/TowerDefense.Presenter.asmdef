@@ -1,0 +1,16 @@
+{
+    "name": "TowerDefense.Presenter",
+    "rootNamespace": "",
+    "references": [
+        "GUID:52060fe5280ae0341b9a0541d3b9707f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

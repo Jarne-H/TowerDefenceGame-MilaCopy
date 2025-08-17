@@ -1,0 +1,17 @@
+{
+    "name": "TowerDefense.Model",
+    "rootNamespace": "",
+    "references": [
+        "GUID:58b8605ac59291743a464f76dd8f243c",
+        "GUID:2c2a3868c01bbe245843f40fad4b5c3a"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": true
+}

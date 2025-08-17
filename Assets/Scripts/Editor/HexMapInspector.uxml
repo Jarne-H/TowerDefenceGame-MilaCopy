@@ -1,0 +1,14 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <engine:TabView style="padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; background-color: rgba(0, 0, 0, 0.33);">
+        <engine:Tab label="Default map" style="padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px;">
+            <engine:SliderInt label="SliderInt" value="42" high-value="10" data-source-type="HexMapDefinition, Assembly-CSharp" show-input-field="true" low-value="1" binding-path="_size" />
+            <engine:EnumField label="Default CellType" value="Center" type="MapSystem.Model.CellType, Assembly-CSharp" data-source-type="HexMapDefinition, Assembly-CSharp" binding-path="_defaultCellType" name="EnumField" />
+        </engine:Tab>
+        <engine:Tab label="Custom Cells" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px;">
+            <engine:EnumField label="CellType" value="Road" type="MapSystem.Model.CellType, TowerDefense.Model" data-source-type="MapSystem.Model.CellType, TowerDefense.Model" name="CustomCellType" />
+            <engine:Button text="Set To Selected Tiles" name="SetCustomCellTypeButton" />
+            <engine:Button text="Clear Custom Tiles" name="ClearCustomCellsButton" />
+        </engine:Tab>
+    </engine:TabView>
+    <engine:Button text="Generate Map" name="GenerateButton" />
+</engine:UXML>

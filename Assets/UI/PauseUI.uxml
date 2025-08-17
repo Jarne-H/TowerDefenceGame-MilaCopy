@@ -1,0 +1,8 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Stylesheets/mainstylesheet.uss?fileID=7433441132597879392&amp;guid=4034ef2c3909e4949bd8044d31a388a3&amp;type=3#mainstylesheet" />
+    <engine:VisualElement class="background">
+        <engine:Label text="Paused" class="header" />
+        <engine:Button text="New Game" name="NewGameButton" class="button" />
+        <engine:Button text="Menu&#10;" name="MenuButton" class="button" />
+    </engine:VisualElement>
+</engine:UXML>
